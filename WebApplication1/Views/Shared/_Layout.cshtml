@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - HVAC Maintenance of Texas</title>
+    <link href="@Url.Content("~/Content/HVAC.css")" rel="stylesheet" type="text/css" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+</head>
+<body>
+
+        @Html.Partial("_NavBar")
+        @Html.Partial("_LoginPartial")
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <center><img id="HVAC_logo" alt="HVAC_Logo" src="@Url.Content("~/Content/Images/HVAC.jpg")" /></center>
+            <footer>
+                <p>&copy; @DateTime.Now.Year - HVAC Maintenance of Texas</p><p>@Html.ActionLink("Privacy Policy", "Privacy", "Privacy")</p>
+                <div style=" background: #D3D3D3 !important"> <p><center> License  TACLA92544E</center></p></div>
+            </footer>
+
+        </div>
+
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+
+
+
+
+
+
+    </body>
+</html>
